@@ -21,12 +21,6 @@ body {
     font-weight: 400;  
 }
 
-h2 {
-    font-weight: 700;
-    color: var(--color-dark-blue);
-    margin: 30px 0 20px 0;
-}
-
 p {
     color: var(--color-grayish-blue);
 }
@@ -52,8 +46,15 @@ img {
     width: 320px;
     height: 497px;
     background-color: var(--color-white);
-    padding: 18px;
-    border-radius: 18px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+p:first-child {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--color-dark-blue);
+    margin: 30px 0 20px 0;
 }
 
 @media screen and (max-width:375px) {
