@@ -52,8 +52,8 @@ img {
     width: 320px;
     height: 497px;
     background-color: var(--color-white);
-    padding: 21px;
-    border-radius: 21px;
+    padding: 18px;
+    border-radius: 18px;
 }
 
 @media screen and (max-width:375px) {
