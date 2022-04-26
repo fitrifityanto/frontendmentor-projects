@@ -1,0 +1,195 @@
+:root {
+    --color-main-bg:hsl(233, 47%, 7%);
+    --color-card-bg:hsl(244, 38%, 16%);
+    --color-accent:hsl(277, 64%, 61%);
+    --color-mainheading:hsl(0, 0%, 100%);
+    --color-mainp: hsla(0, 0%, 100%, 0.75);
+    --color-statheading: hsla(0, 0%, 100%, 0.6);
+
+    --font-inter:'Inter', sans-serif;
+    --font-deca:'Lexend Deca', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-main-bg);
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-family: var(--font-inter);
+    font-size: clamp(1.6em, 3.5vw, 2.2em);
+    font-weight: 700;
+    color: var(--color-mainheading);
+}
+
+p {
+    font-size: .9375rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#card {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    width: min(100% - 2.5rem, 1110px);
+    margin-inline: auto;
+}
+
+.card-wrapper {
+    display: flex;
+}
+
+.content {  
+    background-color: var(--color-card-bg);
+    padding-top: 77px;
+    padding-bottom: 65px;
+}
+
+.content-item {
+    width: min(80%, 26rem) ;
+    margin-inline: auto;
+}
+
+.content-item > p {
+    width: calc(100% - 2rem);
+    font-family: var(--font-inter);
+    line-height: 1.6;
+    color: var(--color-mainp);
+    margin-top: 1.625rem;
+    margin-bottom: 4.75rem;
+}
+
+.content-item > h1 > span {
+    color: var(--color-accent);
+}
+
+.image {
+    width: 100%;
+    flex: 1 1 100%;
+    border-radius: 0 8px 8px 0;
+    background-color: var(--color-card-bg);
+    position:relative; 
+}
+
+.image > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: 75%;
+    filter: brightness(1.3) contrast(.6);    
+}
+
+/* .image::after dan .image::before untuk membuat duotone image */
+.image::after {
+    background-color:var(--color-accent);
+    bottom:0;
+    content:'';
+    height:100%;
+    left:0;
+    mix-blend-mode:multiply;
+    position:absolute;
+    right:0;
+    top:0;
+    width:100%;
+    z-index: 1;
+}
+
+.image::before {
+    background-color:var(--color-card-bg);
+    bottom:0;
+    content:'';
+    height:100%;
+    left:0;
+    mix-blend-mode:lighten;
+    position:absolute;
+    right:0;
+    top:0;
+    width:100%;
+    z-index: 1;
+}
+
+.stat {
+    width: min(90%, 22rem);
+    list-style: none;
+    padding: 0;
+    color: var(--color-statheading);
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat > li > p:first-child {
+    font-family: var(--font-inter);
+    color: var(--color-mainheading);
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.stat > li > p:last-child {
+    font-family: var(--font-deca);
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+}
+
+.attribution { font-size: 11px; text-align: center;color: white; margin-bottom: 1rem; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width:45em) {
+    .card-wrapper {
+        flex-direction: column;
+    }
+
+    .content {
+        order: 2;
+        text-align: center;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .image  {
+        max-width: 640px;
+    }
+
+    .image > img {
+        border-radius: 8px 8px 0 0;  
+    }
+
+    .stat {
+        flex-direction: column;
+        gap: 30px;
+        margin-inline: auto;
+    }
+}
+
+@media (min-width:45em) {
+    .content {
+        border-radius: 8px 0 0 8px;
+    }
+    
+    .image {
+        max-width: 540px;
+        border-radius: 0 8px 8px 0;
+    }
+
+    .image > img {
+        border-radius: 0 8px 8px 0;
+    }
+}
+
