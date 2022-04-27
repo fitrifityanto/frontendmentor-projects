@@ -1,0 +1,151 @@
+:root {
+    --color-light:hsl(0, 0%, 95%);
+    --color-p:hsla(0, 0%, 100%, 0.75);
+    --color-bright-orange:hsl(31, 77%, 52%);
+    --color-dark-cyan:hsl(184, 100%, 22%);
+    --color-ver-dark-cyan:hsl(179, 100%, 13%);
+
+    --font-p:'Lexend Deca', sans-serif;
+    --font-h:'Big Shoulders Display', cursive;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-p);
+    background-color: var(--color-light);
+    color: var(--color-p);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1 {
+    margin: 2.25rem 0;
+    font-family: var(--font-h);
+    font-weight: 700;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    color: white;
+}
+
+p {
+    line-height: 1.5;
+    font-size: .9375rem;
+}
+
+button {
+    border: none;
+    font-size: inherit;
+    color: var(--color-dark-cyan);
+    background-color: var(--color-light);
+    letter-spacing: .2px;
+    padding: .8rem 2rem;
+    border-radius: 50px 50px 50px 50px;
+    margin-top: 5.375rem;
+}
+
+
+
+.container {
+    width: min(100% - 2rem , 61.875rem);
+    margin-inline: auto;
+}
+
+.card-wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 19.25rem);
+    grid-auto-rows: 500px;
+    justify-content: center;
+    align-content: center;
+}
+
+.card {
+    background-color: var(--color-dark-cyan);
+    padding: 2.875rem;
+}
+
+.card:first-child {
+    background-color: var(--color-bright-orange);
+    border-radius: 8px 0 0 8px;
+}
+
+.card:last-child {
+    background-color: var(--color-ver-dark-cyan);
+    border-radius: 0 8px 8px 0;
+}
+
+.card:first-child button {
+    color: var(--color-bright-orange);
+}
+
+.card:last-child button {
+    color: var(--color-ver-dark-cyan);
+}
+
+.card button:hover,
+.card button:active,
+.card button:visited {
+    outline: 1px var(--color-light) solid;
+    background-color: transparent;
+    color: var(--color-light);
+    cursor: pointer;
+}
+
+.attribution { font-size: 11px; text-align: center; color: var(--color-ver-dark-cyan); }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+ @media (min-width:646px) and (max-width:957px) {
+    .card:first-child {
+        border-radius: 8px 0 0 0;
+    }
+
+    .card:nth-child(2) {
+        border-radius: 0 8px 0 0;
+    }
+
+    .card:last-child {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        align-self: flex-start;
+        border-radius: 0 0 8px 8px;
+    }
+ }
+
+ @media (max-width:645px) {
+    .card-wrapper {
+        margin-top: 5.625rem;
+        margin-bottom: 5.625rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 327px;
+        flex: 0 1 100%;
+    }
+
+    .card:first-child {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .card:last-child {
+        border-radius: 0 0 8px 8px;
+    }
+
+    button {
+        margin-top: 1.875rem;
+    }
+ }
