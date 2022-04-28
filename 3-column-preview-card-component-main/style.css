@@ -101,7 +101,7 @@ button {
     cursor: pointer;
 }
 
-.attribution { font-size: 11px; text-align: center; color: var(--color-ver-dark-cyan); }
+.attribution { font-size: 11px; text-align: center; color: var(--color-ver-dark-cyan); padding: 1rem;}
 .attribution a { color: hsl(228, 45%, 44%); }
 
 
