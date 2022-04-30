@@ -19,7 +19,7 @@ body {
     font-family: var(--font-family);
     background:   url('images/bg-pattern-top.svg'), url('images/bg-pattern-bottom.svg'), var(--cbg-body-dark-cyan);
     background-repeat:  no-repeat, no-repeat;  
-    background-position: bottom calc(10% + 15vw) right calc(60% + 80vh), top calc(10% + 15vw) left calc(60% + 80vh);
+    background-position: bottom calc(10% + 15vw) right calc(60% + 80vh), top calc(10% + 26vw) left calc(60% + 75vh);
 }
 
 img {
