@@ -72,17 +72,18 @@ main {
     text-align: center;
 }
 
-.names p:first-child {
+.names h1 {
     font-weight: 700;
+    font-size: 1.2em;
 }
 
-p > span {
+h1 > span {
     font-weight: 400;
     margin-left: .3rem;
     color: var(--cfont-accent);
 }
 
-.names p:last-child {
+.names p {
     font-size: .9375rem;
     color: var(--cfont-accent);
     margin-top: .4rem;
