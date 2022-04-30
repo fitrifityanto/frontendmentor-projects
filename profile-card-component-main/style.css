@@ -19,7 +19,7 @@ body {
     font-family: var(--font-family);
     background:   url('images/bg-pattern-top.svg'), url('images/bg-pattern-bottom.svg'), var(--cbg-body-dark-cyan);
     background-repeat:  no-repeat, no-repeat;  
-    background-position: bottom calc(10% + 15vw) right calc(60% + 80vh), top calc(10% + 26vw) left calc(60% + 75vh);
+    background-position: bottom 40vh right 50vw, top 49vh left 51vw;
 }
 
 img {
@@ -125,10 +125,3 @@ h1 > span {
 
  .attribution { font-size: 11px; text-align: center; margin-bottom: 1rem; color: white;}
  .attribution a { color: hsl(228, 45%, 44%); }
-
-
-@media (max-width:38em) {
-    body {
-        background-position: bottom calc(10% + 85vw) right calc(65% + 80vh), top calc(10% + 85vw) left calc(65% + 80vh);
-    }
-}
