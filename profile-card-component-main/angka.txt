@@ -1,0 +1,11 @@
+width :352
+width: 328
+
+padding-top : 86
+padding-bottom : 24
+
+width stat : 240
+width stat desktop : 260
+
+
+margin-top stat : 25

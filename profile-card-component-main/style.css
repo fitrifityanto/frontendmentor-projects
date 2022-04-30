@@ -1,0 +1,145 @@
+:root {
+    --cfont-dark-gray:hsl(0, 0%, 59%);
+    --cbg-body-dark-cyan:hsl(185, 75%, 39%);
+    --cheading:hsl(229, 23%, 23%);
+    --cfont-accent:hsl(227, 10%, 46%);
+
+    --font-family:'Kumbh Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--cbg-body-dark-cyan);
+    background-image:   url('images/bg-pattern-top.svg'), url('images/bg-pattern-bottom.svg');
+    background-repeat:  no-repeat, no-repeat;  
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+main {
+    width: min(100% - 2rem, 60em);
+    margin-inline: auto;
+}
+
+.card__container {
+    min-height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: white;
+    background-image: url('images/bg-pattern-card.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain, contain;
+    max-width: 22rem;
+    flex: 0 1 100%;
+    border-radius: 20px;
+    padding: 5.8rem 0 24px 0;
+}
+
+.image__profile {
+    width: 100%;
+}
+
+.image__profile > img {
+    margin: 0 auto;
+    outline: .35rem white solid;
+    border-radius: 100%;  
+}
+
+.names,
+.stat {
+    font-size: 1.125rem;
+}
+
+.names {
+    margin-top: 1.56rem;
+    text-align: center;
+}
+
+.names p:first-child {
+    font-weight: 700;
+}
+
+p > span {
+    font-weight: 400;
+    margin-left: .3rem;
+    color: var(--cfont-accent);
+}
+
+.names p:last-child {
+    font-size: .9375rem;
+    color: var(--cfont-accent);
+    margin-top: .4rem;
+}
+
+.wrapper {
+    width: 100%;
+    margin-top: 1.56rem;
+    border-top: 1px solid rgb(150, 150, 150, .3);
+    padding-top: 1.56rem;  
+}
+
+.stat__container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.stat {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item__stat {
+    text-align: center;
+
+}
+
+.item__stat p:first-child {
+    font-weight: 700;
+}
+
+.item__stat p:last-child {
+    font-size: .68rem;
+    color: var(--cfont-accent);
+    letter-spacing: 1px;
+    margin-top: .4rem;
+}
+
+ .attribution { font-size: 11px; text-align: center; margin-bottom: 1rem; color: white;}
+ .attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media (max-width:599px) {
+    body {
+        background-size: calc(100% + 20rem), calc(100% + 20rem);
+        background-position: calc(100% - 45vw) calc(100% - 60vh), calc(100% + 30em) calc(100% + 21em);
+    }
+
+    .card {
+        max-width: 328px;
+    }
+}
+
+ @media (min-width:600px) {
+     body {
+        background-size: 70vw, 70vw;
+        background-position: calc(100% - 50vw) calc(100% - 40vh), calc(100% + 17em) calc(100% + 40em);
+     }
+ }
