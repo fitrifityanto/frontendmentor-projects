@@ -17,9 +17,9 @@
 
 body {
     font-family: var(--font-family);
-    background-color: var(--cbg-body-dark-cyan);
-    background-image:   url('images/bg-pattern-top.svg'), url('images/bg-pattern-bottom.svg');
+    background:   url('images/bg-pattern-top.svg'), url('images/bg-pattern-bottom.svg'), var(--cbg-body-dark-cyan);
     background-repeat:  no-repeat, no-repeat;  
+    background-position: bottom calc(10% + 15vw) right calc(60% + 80vh), top calc(10% + 15vw) left calc(60% + 80vh);
 }
 
 img {
@@ -28,7 +28,7 @@ img {
 }
 
 main {
-    width: min(100% - 2rem, 60em);
+    width: min(100% - 3rem, 60em);
     margin-inline: auto;
 }
 
@@ -49,7 +49,7 @@ main {
     max-width: 22rem;
     flex: 0 1 100%;
     border-radius: 20px;
-    padding: 5.8rem 0 24px 0;
+    padding: 5.8rem 0 1.5rem 0;
 }
 
 .image__profile {
@@ -79,7 +79,7 @@ main {
 
 h1 > span {
     font-weight: 400;
-    margin-left: .3rem;
+    margin-left: .6rem;
     color: var(--cfont-accent);
 }
 
@@ -127,20 +127,8 @@ h1 > span {
  .attribution a { color: hsl(228, 45%, 44%); }
 
 
-@media (max-width:599px) {
+@media (max-width:38em) {
     body {
-        background-size: calc(100% + 20rem), calc(100% + 20rem);
-        background-position: calc(100% - 45vw) calc(100% - 60vh), calc(100% + 30em) calc(100% + 21em);
-    }
-
-    .card {
-        max-width: 328px;
+        background-position: bottom calc(10% + 85vw) right calc(65% + 80vh), top calc(10% + 85vw) left calc(65% + 80vh);
     }
 }
-
- @media (min-width:600px) {
-     body {
-        background-size: 70vw, 70vw;
-        background-position: calc(100% - 50vw) calc(100% - 40vh), calc(100% + 17em) calc(100% + 40em);
-     }
- }
