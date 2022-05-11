@@ -56,7 +56,7 @@ main {
 }
 
 .component {
-    box-shadow: 1px 1px 8px gray;
+    box-shadow: 1px 1px 5px rgb(128, 128, 128, .3);
     overflow: hidden;
     border-radius: 8px;
     
