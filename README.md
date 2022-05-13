@@ -6,4 +6,4 @@ It was difficult at first, because I'm still new to this coding world. I wish I 
 
 The folder name represents the challenge. I just copy and paste from the frontend mentor. each challenge folder contains the solutions that I completed, usually there are 2 files that I create (**mysolution.html** and **style.css**), these are for basic challenges (HTML and CSS).
 
-You can see my repository [here](https://github.com/fitrifityanto/frontendmentor-projectsg)
+You can see my repository [here](https://github.com/fitrifityanto/frontendmentor-projects)
